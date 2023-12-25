@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--topbar-->
+<section>
+    <div id="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="top-contact">
+                        <li><a><i class="fa-solid fa-phone"></i>&nbsp;(+62)82233496566</a></li>
+                        <li><a><i class="fa-solid fa-envelope"></i>&nbsp;ft@uim.ac.id</a></li>
+                        <li><a><i class="fa-solid fa-bullhorn"></i>&nbsp;Terbaru : <span id="breaking-news-container"></span> </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="sosmed">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end topbar-->
+
+<!--navbar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{% static 'image/logo.png'%}" alt="Bootstrap" width="250" height="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PROFIL</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'visidanmisi' %}">Visi dan Misi</a></li>
+                        <li><a class="dropdown-item" href="{% url 'pimpinanprodi' %}">Pimpinan Prodi</a></li>
+                        <li><a class="dropdown-item" href="{% url 'kurikulum' %}">Kurikulum</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dosen' %}">DOSEN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'sap' %}">SAP</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">MAHASISWA</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'organisasi' %}">Organisasi</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'berita' %}">BERITA</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">JADWAL</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'jadwaluas' %}">Jadwal UTS TI 2023/2024</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">DOWNLOAD</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'pengumuman' %}">Pengumuman</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--end navbar--> 
+
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="{% static 'image/uim.webp'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h6>Program Studi Teknik informatika > Dosen</h6>
+            <div class="text-bg-warning p-10" style="width: 300px; ">
+                <h1>Dosen</h1>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<section id="content" class="about-us-area section-padding-100 mt-4 js-doc-main-el">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+            <div id="main">
+                <div class="main">
+                    <div class="main_title">DOSEN</div>
+                    <div class="main_body">
+                        <br>
+                        <div class="table-responsive-md">
+                            <table class="table table-secondary table-bordered table-hover">
+                                <thead class="table-dark ">
+                                    <tr>
+                                        <th scope="col">NO <br>&nbsp;</th>
+                                        <th scope="col">NAMA DOSEN</th>
+                                        <th scope="col">NIDN/NUP/NIDK <br>&nbsp;</th>
+                                        <th scope="col">NIP <br>&nbsp;</th>
+                                        <th scope="col">N/P <br>&nbsp;</th>
+                                        <th scope="col">Agama <br>&nbsp;</th>
+                                        <th scope="col">Tgl. Lahir </th>
+                                        <th scope="col">Program Studi </th>
+                                        <th scope="col">Status <br>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Rofiuddin, M.Kom</td>
+                                        <td>0715088604</td>
+                                        <td></td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>15-08-1986</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Ali Tohir, S.Sy. M.Pd.i</td>
+                                        <td>0705047502</td>
+                                        <td>130488822</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>05-04-1975</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Ary iswahyudi, S.Si.M.T</td>
+                                        <td>0706058505</td>
+                                        <td>130488832</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>06-05-1985</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Buhari, S.Sos., M.Si</td>
+                                        <td>0708086801</td>
+                                        <td>130488818</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>08-08-1968</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Busro Akramul Umam, ST.,MT</td>
+                                        <td>0712067405</td>
+                                        <td>130488781</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>12-06-1974</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">6</th>
+                                        <td>Fathorrozi Ariyanto, M.Si</td>
+                                        <td>0725058104</td>
+                                        <td>130488013</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>25-05-1981</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">7</th>
+                                        <td>Dr.Hozairi, S.ST., M.T</td>
+                                        <td>0723038102</td>
+                                        <td>130488504</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>23-03-1981</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">8</th>
+                                        <td>Masdukil Makruf, S.Kom., M.T</td>
+                                        <td>0702069001</td>
+                                        <td>130488724</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>02-06-1990</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">9</th>
+                                        <td>Miftahul Walid, S.Kom., MT</td>
+                                        <td>0701018605</td>
+                                        <td>130488722</td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>01-01-1986</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10</th>
+                                        <td>Moh. Aminullah Hamzah, S.Kom., M.Kom</td>
+                                        <td>0709078907</td>
+                                        <td></td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>09-07-1989</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">11</th>
+                                        <td>Moh. Badri Tamam, M.Kom</td>
+                                        <td>9907160</td>
+                                        <td></td>
+                                        <td>L</td>
+                                        <td>Islam</td>
+                                        <td>25-04-1995</td>
+                                        <td>S1 Teknik Informatika</td>
+                                        <td>Aktif</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        
+        <div class="col-md-4">
+            <div id="widget">
+                <div class="widget">
+                    <div class="widget_title">Cari</div>
+                    <div class="widget_body">
+                        <form role="search" method="get" action="#">
+                            <label>
+                                <input type="text" class="form-control" placeholder="Search …" name="keyword" id="keyword">
+                            </label>
+                            <input type="submit" class="btn btn-warning" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="widget">
+                <div class="widget">
+                    <div class="widget_title">Kontak</div>
+                    <div class="widget_body">
+                        <b><i class="fa fa-home"></i> Alamat :</b>
+                        <p>JL. Pondok Pesantren Miftahul Ulum Bettet, Pamekasan Madura</p>
+                        <b><i class="fa fa-phone"></i> Telepon :</b>
+                        <p>(+62)82233496566</p>
+                        <b><i class="fa fa-envelope"></i> Email :</b>
+                        <p> ft@uim.ac.id</p>
+                        <b><i class="fa fa-desktop"></i> Akses Cepat :</b>
+                        <p> - uim.ac.id <br> - ft.uim.ac.id </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="widget">
+                <div class="widget">
+                    <div class="widget_title">Lokasi</div>
+                    <div class="widget_body" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.7437038038524!2d113.45518370820993!3d-7.155602992819048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd77e19102409eb%3A0x481371b8b659102d!2sUniversitas%20Islam%20Madura%20%2F%20UIM%20Pamekasan!5e0!3m2!1sid!2sid!4v1702449133356!5m2!1sid!2sid" width="300px" height="200px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="widget">
+                <div class="widget">
+                    <div class="widget_title">Video</div>
+                    <div class="widget_body" style=" position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0;">
+                        <video controls="true" width="300px" height="200px" muted poster="{% static 'image/bg-video.png' %}">
+                            <source src="{% static 'video/video-prodi-ti-uim.mp4' %}" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div id="widget">
+                <div class="widget">
+                    <div class="widget_title">Berita Terbaru</div>
+                    <div class="widget_body">
+                        <div class="latest-blog-posts">
+                            <div class="single-latest-blog-post d-flex">
+                                <div class="latest-blog-post-thumb">
+                                    <img src="{% static 'image/berita-terbaru-1.webp' %}" style="height: 60px; width: 150px;">
+                                </div>
+                                <div class="latest-blog-post-content">
+                                    <a href="#" class="post-title" title="HIMA Teknik Informatika Fakultas Teknik UIM Gelar Pelatihan Sekaligus Launching Website">
+                                        <h6>HIMA Teknik Informatika Fakultas Teknik UIM Gelar Pelatihan Sekaligus Launching Website</h6>
+                                    </a>
+                                    <a class="post-date">Tanggal 02-07-2022</a>
+                                </div>
+                            </div>
+                            <div class="single-latest-blog-post d-flex">
+                                <div class="latest-blog-post-thumb">
+                                    <img src="{% static 'image/berita-terbaru-2.webp' %}" style="height: 60px; width: 130px;">
+                                </div>
+                                <div class="latest-blog-post-content">
+                                    <a href="#" class="post-title" title="Evaluasi Kinerja Prodi TI dan SI Mendapatkan Apresiasi Unggul Oleh LPMI UIM.">
+                                        <h6>Evaluasi Kinerja Prodi TI dan SI Mendapatkan Apresiasi Unggul Oleh LPMI UIM.</h6>
+                                    </a>
+                                    <a class="post-date">Tanggal 14-12-2021 </a>
+                                </div>
+                            </div>
+                            <div class="single-latest-blog-post d-flex">
+                                <div class="latest-blog-post-thumb">
+                                    <img src="{% static 'image/berita-terbaru-3.webp' %}" style="height: 60px; width: 180px;">
+                                </div>
+                                <div class="latest-blog-post-content">
+                                    <a href="#" class="post-title" title="Dosen Teknik Informatika dan Sistem Informasi Menghibahkan Buku Ajar ke Perpustakaan UIM Pamekasan">
+                                        <h6>Dosen Teknik Informatika dan Sistem Informasi Menghibahkan Buku Ajar ke Perpustakaan UIM Pamekasan</h6>
+                                    </a>
+                                    <a class="post-date">Tanggal 14-12-2021</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+  
+<footer class="footer-area">
+    <div class="main-footer-area">
+        <div class="container">
+            <div class="row"></div>
+        </div>
+    </div>
+    <div class="bottom-footer-area">
+        <div class="container">
+            <p>Copyright Prodi Teknik Informatika 2024. by PRODI-TI</p>
+        </div>
+    </div>
+</footer>
+<button onclick="topFunction()" id="backToTopBtn" title="Go to top">&#8593;</button>
+{% endblock content %}

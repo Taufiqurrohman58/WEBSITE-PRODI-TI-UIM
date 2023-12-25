@@ -1,0 +1,12 @@
+
+#main { margin-bottom:30px; }
+.main .main_title { font-size:24px; font-weight:500; text-transform:uppercase; }
+.main .main_body { text-align:justify; line-height: 2; font-weight:normal; }
+
+#widget { background-color: #eef3f6; padding: 20px; margin-bottom:30px; }
+.widget .widget_title { font-size:20px; font-weight:500; text-transform:uppercase; }
+.widget_body { padding:10px 0px; font-weight:normal; }
+
+#footer-widget { margin-bottom:20px; }
+.footer-widget .footer-widget_title { font-size:15px; font-weight:500; text-transform:uppercase; color: #ffffff; }
+.footer-widget_body { padding:10px 0px; color: #808080; font-weight:normal; }

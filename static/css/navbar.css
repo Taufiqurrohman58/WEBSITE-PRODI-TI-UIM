@@ -1,0 +1,17 @@
+
+.nav-link{
+    color: black!important;
+}
+
+.nav-link:hover{
+    color: gold!important;
+}
+
+
+.dropdown-item{
+    color: black!important;
+}
+
+.dropdown-item:hover{
+    color: gold!important;
+}

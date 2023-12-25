@@ -1,0 +1,85 @@
+#docs-internal-guid-570f8d9f-7fff-ec16-ebaf-ff49c1f83516 p{
+    line-height:1.38;
+    text-align: justify;
+    margin-top:0pt;
+    margin-bottom:0pt;
+}
+
+#docs-internal-guid-570f8d9f-7fff-ec16-ebaf-ff49c1f83516 p span{
+    font-size: 11pt;
+    font-family: Arial; 
+    color:black; 
+    background-color: transparent; 
+    font-variant-numeric: normal; 
+    font-variant-east-asian: normal; 
+    vertical-align: baseline; 
+    white-space: pre-wrap;
+}
+
+.single-blog-post wow fadeInUp{
+    visibility: visible;
+    animation-delay: 300ms; 
+    animation-name: fadeInUp !important;
+}
+
+.blog-post-thumb img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul li i{
+    width:20px;
+}
+
+ul li a{
+    color:black;
+}
+
+/* lokasi*/
+.widget_body iframe{
+    border:0; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+}
+
+/* video*/
+.widget_body video{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+}
+
+/* berita terbaru*/
+.single-latest-blog-post {
+    padding:15px 0px;
+    border-bottom:1px dashed #DADADA;
+}
+
+.post-date {
+    color: green;
+    margin: -10px; 
+    padding:20px ; 
+    position: relative; 
+    top: -12px;
+}
+
+.latest-blog-post-content a h6{
+    margin: -10px; 
+    padding:20px ; 
+    position: relative; 
+    top: -12px;
+}
+
+.footer-area .main-footer-area{
+    padding:100px 0px; 
+    background-color:gold;
+}
+
+.bottom-footer-area .container p{
+    color: rgb(201, 198, 198) ;
+}
