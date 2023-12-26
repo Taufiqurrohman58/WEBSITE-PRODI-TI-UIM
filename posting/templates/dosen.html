@@ -85,7 +85,7 @@
         <img src="{% static 'image/uim.webp'%}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h6>Program Studi Teknik informatika > Dosen</h6>
-            <div class="text-bg-warning p-10" style="width: 300px; ">
+            <div class="text-bg-warning p-10" style="width: 150px; ">
                 <h1>Dosen</h1>
             </div>
         </div>
@@ -240,6 +240,12 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="prev-nextBtn">
+                                <button id="prevBtn" onclick="previousPage()">Sebelumnya</button>
+                                <button id="nextBtn" onclick="nextPage()">Selanjutnya</button>
+                                <span id="pageInfo"></span>
+                            </div>
+    
                         </div>   
                     </div>
                 </div>
