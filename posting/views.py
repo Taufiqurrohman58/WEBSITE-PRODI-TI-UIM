@@ -38,7 +38,7 @@ def berita(request):
     return HttpResponse(template.render())
 
 def jadwaluas(request):
-    template = loader.get_template('jadwaluas')
+    template = loader.get_template('jadwaluas.html')
     return HttpResponse(template.render())
 
 def pengumuman(request):
