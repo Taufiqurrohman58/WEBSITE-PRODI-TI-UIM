@@ -9,12 +9,12 @@
 #nextBtn {
     padding: 10px;
     font-size: 14px;
-    background-color: gold;
+    background-color:blue;
 }
 
 #prevBtn:hover,
 #nextBtn:hover {
-    background-color:rgb(248, 238, 180);
+    background-color: rgb(79, 79, 252);
 }
   
 #pageInfo {

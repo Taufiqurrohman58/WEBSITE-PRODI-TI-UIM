@@ -242,8 +242,8 @@
                             </table>                           
                         </div>   
                         <div class="prev-nextBtn">
-                            <button id="prevBtn" onclick="previousPage()">Sebelumnya</button>
-                            <button id="nextBtn" onclick="nextPage()">Selanjutnya</button>
+                            <button class="btn academy-btn btn-sm mt-15" id="prevBtn" onclick="previousPage()">Sebelumnya</button>
+                            <button class="btn academy-btn btn-sm mt-15" id="nextBtn" onclick="nextPage()">Selanjutnya</button>
                             <span id="pageInfo"></span>
                         </div>
                     </div>
@@ -312,7 +312,7 @@
                                     <img src="{% static 'image/berita-terbaru-1.webp' %}" style="height: 60px; width: 150px;">
                                 </div>
                                 <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title" title="HIMA Teknik Informatika Fakultas Teknik UIM Gelar Pelatihan Sekaligus Launching Website">
+                                    <a href="{% url 'berita2' %}" class="post-title" title="HIMA Teknik Informatika Fakultas Teknik UIM Gelar Pelatihan Sekaligus Launching Website">
                                         <h6>HIMA Teknik Informatika Fakultas Teknik UIM Gelar Pelatihan Sekaligus Launching Website</h6>
                                     </a>
                                     <a class="post-date">Tanggal 02-07-2022</a>
@@ -323,7 +323,7 @@
                                     <img src="{% static 'image/berita-terbaru-2.webp' %}" style="height: 60px; width: 130px;">
                                 </div>
                                 <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title" title="Evaluasi Kinerja Prodi TI dan SI Mendapatkan Apresiasi Unggul Oleh LPMI UIM.">
+                                    <a href="{% url 'berita3' %}" class="post-title" title="Evaluasi Kinerja Prodi TI dan SI Mendapatkan Apresiasi Unggul Oleh LPMI UIM.">
                                         <h6>Evaluasi Kinerja Prodi TI dan SI Mendapatkan Apresiasi Unggul Oleh LPMI UIM.</h6>
                                     </a>
                                     <a class="post-date">Tanggal 14-12-2021 </a>
@@ -334,7 +334,7 @@
                                     <img src="{% static 'image/berita-terbaru-3.webp' %}" style="height: 60px; width: 180px;">
                                 </div>
                                 <div class="latest-blog-post-content">
-                                    <a href="#" class="post-title" title="Dosen Teknik Informatika dan Sistem Informasi Menghibahkan Buku Ajar ke Perpustakaan UIM Pamekasan">
+                                    <a href="{% url 'berita4' %}" class="post-title" title="Dosen Teknik Informatika dan Sistem Informasi Menghibahkan Buku Ajar ke Perpustakaan UIM Pamekasan">
                                         <h6>Dosen Teknik Informatika dan Sistem Informasi Menghibahkan Buku Ajar ke Perpustakaan UIM Pamekasan</h6>
                                     </a>
                                     <a class="post-date">Tanggal 14-12-2021</a>
