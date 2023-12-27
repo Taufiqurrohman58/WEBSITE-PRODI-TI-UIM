@@ -45,6 +45,10 @@ def pengumuman(request):
     template = loader.get_template('pengumuman.html')
     return HttpResponse(template.render())
 
+def programpembelajaran(request):
+    template = loader.get_template('programbljr.html')
+    return HttpResponse(template.render())
+
 
 
 #def about(request):

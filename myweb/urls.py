@@ -14,4 +14,5 @@ urlpatterns = [
     path('berita/', berita, name='berita' ),
     path('jadwaluas/', jadwaluas, name='jadwaluas' ),
     path('pengumuman/', pengumuman, name='pengumuman' ),
+    path('program pembelajaran/', programpembelajaran, name='program pembelajaran' ),
 ]

@@ -1,0 +1,27 @@
+.info-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 100%;
+    width: 100%;
+    float: left;
+}
+
+.info-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.info-container th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.info-container th {
+    background-color: rgb(129, 129, 128);
+    color: #fff;
+}
