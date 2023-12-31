@@ -98,8 +98,37 @@
         <div class="col-md-8">
             <div id="main">
                 <div class="main">
-                    <div class="main_title"></div>
+                    <div class="main_title">JADWAL UAS</div>
                     <div class="main_body">
+                        <br>
+                        <div class="container-crud">
+            
+                            <table id="customers" border="1">
+                                <thead>
+                                    <th>Id</th>
+                                    <th>Mata Kuliah ke-1</th>
+                                    <th>Mata Kuliah Ke-2</th>
+                                    <th>Hari,Tanggal UAS</th>
+                                    <th colspan="2" id="mid">Action</th>
+                                </thead>
+                                {% for x in mem %}
+                                <tr>
+                                    <td>{{x.id}}</td>
+                                    <td>{{x.matkul1}}</td>
+                                    <td>{{x.matkul2}}</td>
+                                    <td>{{x.tanggal}}</td>
+                                    <td>
+                                        <a href="update/{{x.id}}"><button id="up">update</button></a>
+                                    </td>
+                                    <td>
+                                        <a href="delete/{{x.id}}"><button id="del">delete</button></a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                            <br><br>
+                            <a href="{% url 'add' %}"><button id="new3">Add Member</button></a>
+                        </div>
                         
                     </div>
                 </div>

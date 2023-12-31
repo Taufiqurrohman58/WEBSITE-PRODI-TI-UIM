@@ -17,3 +17,9 @@ class aplikasi_utama(models.Model):
 
     def _str_(self):
         return f"{self.toko}"
+
+
+class Jadwal(models.Model):
+    matkul1=models.CharField(max_length=100)
+    matkul2=models.CharField(max_length=100)
+    tanggal=models.CharField(max_length=100)

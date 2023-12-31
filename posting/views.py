@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.template import loader
 from .models import kategori, aplikasi_utama
+from .models import Jadwal
 
 # Create your views here.
 
@@ -122,8 +123,40 @@ def beritapage3(request):
     return HttpResponse(template.render())
 
 def jadwaluas(request):
-    template = loader.get_template('jadwaluas.html')
-    return HttpResponse(template.render())
+    mem=Jadwal.objects.all()
+    return render(request,'jadwaluas.html',{'mem':mem})
+
+def add(request):
+    return render (request,'add.html')
+
+def addrec(request):
+    x=request.POST['matkul1']
+    y=request.POST['matkul2']
+    z=request.POST['tanggal']
+    mem=Jadwal(matkul1=x,matkul2=y,tanggal=z)
+    mem.save()
+    return redirect("/")
+
+def delete(request,id):
+    mem=Jadwal.objects.get(id=id)
+    mem.delete()
+    return redirect("/")
+
+def update(request,id):
+    mem=Jadwal.objects.get(id=id)
+    return render(request, 'update.html', {'mem': mem})
+
+
+def uprec(request,id):
+    x=request.POST['matkul1']
+    y=request.POST['matkul2']
+    z=request.POST['tanggal']
+    mem=Jadwal.objects.get(id=id)
+    mem.matkul1=x
+    mem.matkul2=y
+    mem.tanggal=z
+    mem.save()
+    return redirect("/")
 
 def pengumuman(request):
     template = loader.get_template('pengumuman.html')

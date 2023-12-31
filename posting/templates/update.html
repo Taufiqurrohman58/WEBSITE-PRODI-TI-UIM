@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-update ">
+    <div class="container2">
+        <h1>Update Jadwal Mata Kuliah</h1>
+        <br>
+        <form action="{% url 'uprec' mem.id %}" method="post">
+            {% csrf_token %}
+            <label for="">Mata Kuliah Ke-1</label><br><br>
+            <input type="text" name="matkul1" value="{{mem.matkul1}}"><br><br>
+            <label for="">Mata Kuliah Ke-2</label><br><br>
+            <input type="text" name="matkul2" value="{{mem.matkul2}}"><br><br>
+            <label for="">Hari,Tanggal UAS</label><br><br>
+            <input type="text" name="tanggal" value="{{mem.tanggal}}"><br><br>
+            <button type="submit" id="new1">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

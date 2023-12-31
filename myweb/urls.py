@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from posting.views import *
 
 urlpatterns = [
@@ -25,6 +25,12 @@ urlpatterns = [
     path('berita/page2/', beritapage2, name='beritapage2' ),
     path('berita/page3/', beritapage3, name='beritapage3' ),
     path('jadwaluas/', jadwaluas, name='jadwaluas' ),
+    path('add/', add, name='add'),
+    path('addrec/', addrec, name='addrec'),
+    path('jadwaluas/delete/<int:id>/', delete, name='delete'), 
+    path('jadwaluas/update/<int:id>/',update,name='update'),
+    path('jadwaluas/update/uprec/<int:id>/',uprec,name='uprec'),
     path('pengumuman/', pengumuman, name='pengumuman' ),
     path('program pembelajaran/', programpembelajaran, name='program pembelajaran' ),
+
 ]
